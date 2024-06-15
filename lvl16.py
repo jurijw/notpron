@@ -15,7 +15,10 @@ def invert(c):
 def invertString(string):
     output = ""
     for char in string:
-        output += invert(char)
+        if char not in alphabet:
+            output += char
+        else:
+            output += invert(char)
     return output
 
 # Attempt to invert the url and first clue, alphabetically.
@@ -63,6 +66,21 @@ for i in range(len(urls)):
 import pandas as pd
 
 df = pd.DataFrame(info_list)
+
+# Based on the hint "# = ellwll/hrnkov/proo/..." and the fact that inverting these strings corresponds to the first three usernames, we create a url extension here with all found usernames.
+
+filtered_usernames = [un for un in usernames if un != "n/a"]
+usernames_url = "/".join(filtered_usernames)
+jumbled_usernames_url = "/".join([invertString(s) for s in filtered_usernames])
+print(usernames_url)
+print(jumbled_usernames_url)
+
+# Attempt to invert everything relating to a given level
+def invertAll(level_index):
+    print("url: " + invertString(info_list[level_index - 1]["url"].split("/notpron/")[1]))
+    print("user: " + invertString(info_list[level_index - 1]["username"]))
+    print("pass: " + invertString(info_list[level_index - 1]["password"]))
+
 
 # This section deals with interpretting the grid of numbers given in level 16.
 import numpy as np
