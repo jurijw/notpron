@@ -13,3 +13,6 @@
 
 # Video
 *.wmv
+
+# Misc
+__pycache__/
