@@ -124,3 +124,21 @@ arr = np.array([[0,0,0,4],
 # This did not work...
 
 # What finally did work was taking the ith character of every level's username which had a non-zero number in the grid. The levels which had #s, had to have the character inverted.
+
+
+# Everything past this point is working on level 20. I am using this file until I refactor all the useful utilities into a separate one.
+# Caesar cypher
+def caesar(string, shift=1):
+    output = ""
+    for char in string:
+        index = alphabet.find(char)
+        output += alphabet[(index + shift) % len(alphabet)]
+    return output
+
+jumble = "xndrgarsennisennasen"
+
+# Apply all possible Caesar cyphers to the mysterious string.
+for i in range(len(alphabet)):
+    print(caesar(jumble, shift=i))
+
+
