@@ -85,3 +85,19 @@ url: https://www.deathball.net/notpron/zoo/mznvh.htm
 username: doom
 password: murder 
 
+## Level 17
+url: https://www.deathball.net/notpron/finale/pron.htm
+username: n/a
+password: n/a 
+
+## Level 18
+url: https://www.deathball.net/notpron/finale/lamp.htm
+username: n/a
+password: n/a 
+
+## Level 19
+url: https://www.deathball.net/notpron/finale/deaf.htm
+username: unusual
+password: stuff
+hints: used caesar cypher
+
