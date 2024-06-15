@@ -82,6 +82,6 @@ password: access
 
 ## Level 16
 url: https://www.deathball.net/notpron/zoo/mznvh.htm
-username: n/a
-password: n/a
+username: doom
+password: murder 
 
