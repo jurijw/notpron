@@ -1,5 +1,15 @@
 # Ignore images, gifs, and videos
+
+# Images
 *.jpg
 *.jpeg
+*.png
+
+# Gifs
+*.gif
+
+# Audio
 *.mp3
+
+# Video
 *.wmv
