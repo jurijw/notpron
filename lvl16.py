@@ -4,6 +4,8 @@ Clues:
 invert az
 title: resume
 url: /zoo/mznvh
+
+The watch in level 4 is no longer lit up!
 """
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
@@ -90,3 +92,35 @@ arr = np.array([[0,0,0,4],
                [5,0,1,1],
                [1,2,1,None]])
 
+
+# Assuming that the pictures with 0s don't count, the username and password mayy be split between the pictures with #s and those without.
+
+# sharp_levels = (5, 6, 8, 11)
+# non_sharp_levels = (4, 9, 12, 13, 14, 15)
+# 
+# sharp_numbers = (5, 3, 2, 1)
+# non_sharp_numbers = (4, 5, 1, 1, 2, 1)
+# 
+# un_string_sharp = ""
+# pw_string_sharp = ""
+# for num, lvl in zip(sharp_numbers, sharp_levels):
+#     un_string_sharp += usernames[lvl - 1][num]
+#     pw_string_sharp += passwords[lvl - 1][num]
+# 
+# un_string_non_sharp = ""
+# pw_string_non_sharp = ""
+# for num, lvl in zip(non_sharp_numbers, non_sharp_levels):
+#     un_string_non_sharp += usernames[lvl - 1][num]
+#     pw_string_non_sharp += passwords[lvl - 1][num]
+# 
+# print("Sharp cypher: ")
+# print("Sampling from usernames: " + un_string_sharp)
+# print("Sampling from passwords: " + pw_string_sharp)
+# 
+# print("Non sharp cypher: ")
+# print("Sampling from usernames: " + un_string_non_sharp)
+# print("Sampling from passwords: " + pw_string_non_sharp)
+
+# This did not work...
+
+# What finally did work was taking the ith character of every level's username which had a non-zero number in the grid. The levels which had #s, had to have the character inverted.
