@@ -1,0 +1,5 @@
+# Ignore images, gifs, and videos
+*.jpg
+*.jpeg
+*.mp3
+*.wmv
