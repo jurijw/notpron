@@ -31,3 +31,7 @@ def caesar(string, shift=1):
             output += ALPHABET[(index + shift) % len(ALPHABET)]
     return output
 
+from itertools import permutations
+def permutations(string):
+    """Returns an array containing all permuted strings variants of the input string"""
+    return ["".join(perm) for perm in permutations(string)]
