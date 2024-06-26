@@ -31,7 +31,19 @@ def caesar(string, shift=1):
             output += ALPHABET[(index + shift) % len(ALPHABET)]
     return output
 
+def all_caesar(string):
+    """Compute all possible caesar cyphers for a given STRING."""
+    return [caesar(string, shift) for shift in range(26)]
+
 from itertools import permutations
 def permutations(string):
     """Returns an array containing all permuted strings variants of the input string"""
     return ["".join(perm) for perm in permutations(string)]
+
+def select_chars_by_index(string, indexArray):
+    """Returns the string formed by concatenating the characters of STRING found at each index in INDEXARRAY. Indexes starting from 1! (This is because, so far, notpron has always indexed starting from 1."""
+    return "".join([string[i-1] for i in indexArray])
+
+def select(stringArray, nestedIndexArray):
+    """Returns an array of strings formed by applying selectCharsFromArrayByIndex to each string in STRINGARRAY, to each index array in NESTEDINDEXARRAY."""
+    return [select_chars_by_index(string, indexArray) for string, indexArray in zip(stringArray, nestedIndexArray)]
